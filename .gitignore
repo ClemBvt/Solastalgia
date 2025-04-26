@@ -1,0 +1,11 @@
+# Docker
+*.env
+db_data/
+
+# Python
+*.pyc
+__pycache__/
+env/
+
+# Node.js
+node_modules/
