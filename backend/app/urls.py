@@ -15,11 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
 from django.urls import path
-from .views import get_environmental_data
+from .views import preoccupations_json
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('api/environmental-data/', get_environmental_data),
+    path('api/preoccupations/', preoccupations_json),
 ]

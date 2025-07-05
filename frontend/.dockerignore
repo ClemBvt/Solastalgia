@@ -1,0 +1,16 @@
+# Évite de copier les dépendances locales (elles seront réinstallées dans le conteneur)
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Dossiers de build
+build
+dist
+
+# Mac/Linux fichiers systèmes
+.DS_Store
+
+# Environnements
+.env
+.env.local
