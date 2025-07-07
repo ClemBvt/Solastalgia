@@ -25,3 +25,15 @@ class NiveauOcean(models.Model):
 
     def __str__(self):
         return f"{self.annee} : {self.niveau} cm"
+    
+class SourceEmissionGES(models.Model):
+    source = models.CharField(max_length=255)
+    annee = models.IntegerField()
+    co2 = models.FloatField()
+    ch4 = models.FloatField()
+    n2o = models.FloatField()
+    gaz_fluores = models.FloatField()
+    total = models.FloatField()
+
+    def __str__(self):
+        return f"{self.source} ({self.annee})"
