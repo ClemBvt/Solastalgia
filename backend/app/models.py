@@ -37,3 +37,11 @@ class SourceEmissionGES(models.Model):
 
     def __str__(self):
         return f"{self.source} ({self.annee})"
+
+class EspeceMenacee(models.Model):
+    nom = models.CharField(max_length=255)
+    part_menacee = models.FloatField()
+    type = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.nom} ({self.type}) - {self.part_menacee * 100:.1f}%"
