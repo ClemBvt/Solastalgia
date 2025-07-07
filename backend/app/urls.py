@@ -16,8 +16,9 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import preoccupations_json
+from .views import preoccupations_json, temperatures_terrestres_json
 
 urlpatterns = [
     path('api/preoccupations/', preoccupations_json),
+    path('api/temperatures-terrestres/', temperatures_terrestres_json),
 ]
