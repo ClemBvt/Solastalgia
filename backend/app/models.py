@@ -18,3 +18,10 @@ class TemperatureOcean(models.Model):
 
     def __str__(self):
         return f"{self.annee} : {self.ecart}°C"
+
+class NiveauOcean(models.Model):
+    annee = models.IntegerField()
+    niveau = models.FloatField()
+
+    def __str__(self):
+        return f"{self.annee} : {self.niveau} cm"
