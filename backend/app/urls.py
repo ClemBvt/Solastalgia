@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import preoccupations_json, temperatures_terrestres_json, temperatures_oceans_json, niveaux_oceans_json, sources_emissions_ges_json, especes_menacees_json
+from .views import preoccupations_json, temperatures_terrestres_json, temperatures_oceans_json, niveaux_oceans_json, sources_emissions_ges_json, especes_menacees_json, animaux_menaces_json
 
 urlpatterns = [
     path('api/preoccupations/', preoccupations_json),
@@ -24,5 +24,10 @@ urlpatterns = [
     path('api/temperatures-oceans/', temperatures_oceans_json),
     path('api/niveaux-oceans/', niveaux_oceans_json),
     path('api/sources-emissions-ges/', sources_emissions_ges_json),
-    path('api/especes-menacees/', especes_menacees_json)
+    path('api/especes-menacees/', especes_menacees_json),
+    path('api/nombres-animaux-menaces/', animaux_menaces_json)
 ]
+
+    
+
+

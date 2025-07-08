@@ -45,3 +45,10 @@ class EspeceMenacee(models.Model):
 
     def __str__(self):
         return f"{self.nom} ({self.type}) - {self.part_menacee * 100:.1f}%"
+
+class AnimalMenace(models.Model):
+    nom = models.CharField(max_length=255)
+    nombre_restant = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.nom} ({self.nombre_restant} restants)"

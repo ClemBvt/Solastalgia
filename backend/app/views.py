@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from .models import PreoccupationEnvironnementale, TemperatureTerrestre, TemperatureOcean, NiveauOcean, SourceEmissionGES, EspeceMenacee
+from .models import PreoccupationEnvironnementale, TemperatureTerrestre, TemperatureOcean, NiveauOcean, SourceEmissionGES, EspeceMenacee, AnimalMenace
 
 def preoccupations_json(request):
     data = list(PreoccupationEnvironnementale.objects.values())
@@ -24,3 +24,8 @@ def sources_emissions_ges_json(request):
 def especes_menacees_json(request):
     data = list(EspeceMenacee.objects.values())
     return JsonResponse(data, safe=False)
+
+def animaux_menaces_json(request):
+    data = list(AnimalMenace.objects.values())
+    return JsonResponse(data, safe=False)
+
