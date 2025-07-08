@@ -2,6 +2,8 @@ import pandas as pd
 from app.models import TemperatureTerrestre
 
 def run():
+    TemperatureTerrestre.objects.all().delete()
+
     df = pd.read_excel("import_data/excel_files/temperatures_terrestres.xlsx", sheet_name="Donnée")
 
     df = df.iloc[5:, [1, 2]]
@@ -18,4 +20,4 @@ def run():
             ecart=row['ecart']
         )
 
-    print("✅ Import des températures terrestres terminé.")
+    print("Import des températures terrestres terminé.")

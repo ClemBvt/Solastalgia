@@ -2,6 +2,8 @@ import pandas as pd
 from app.models import SourceEmissionGES
 
 def run():
+    SourceEmissionGES.objects.all().delete()
+    
     df = pd.read_excel("import_data/excel_files/sources_emissions_ges.xlsx", header=None)
 
     df.columns = df.iloc[3]
@@ -29,4 +31,4 @@ def run():
             total=row['Total']
         )
 
-    print("✅ Import des sources d'émissions GES terminé.")
+    print("Import des sources d'émissions GES terminé.")

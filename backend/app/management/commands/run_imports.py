@@ -13,4 +13,4 @@ class Command(BaseCommand):
         import_sources_emissions_ges.run()
         import_especes_menacees.run()
         import_nombres_animaux_menaces.run()
-        print("✅ Tous les imports sont terminés.")
+        print("Tous les imports sont terminés.")

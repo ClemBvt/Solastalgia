@@ -2,10 +2,16 @@ import pandas as pd
 from app.models import TemperatureOcean
 
 def run():
+    TemperatureOcean.objects.all().delete() 
+
     df = pd.read_excel("import_data/excel_files/temperatures_oceans.xlsx", sheet_name="Donnée")
-    df = df.iloc[6:, [1, 2]]  # lignes à partir de 7, colonnes Année + Écart
+    
+    df = df.iloc[6:, [1, 2]]
+
     df.columns = ['annee', 'ecart']
+
     df = df.dropna()
+
     df['annee'] = df['annee'].astype(int)
     df['ecart'] = df['ecart'].astype(float)
 
@@ -15,4 +21,4 @@ def run():
             ecart=row['ecart']
         )
 
-    print("✅ Import des températures océaniques terminé.")
+    print("Import des températures océaniques terminé.")
