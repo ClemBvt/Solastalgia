@@ -1,0 +1,38 @@
+.home-container {
+  font-family: sans-serif;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0f7fa;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #00796b;
+}
+
+.intro-section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.chart-section {
+  padding: 4rem 2rem;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.chart-section h2 {
+  margin-bottom: 2rem;
+  color: #33691e;
+}
