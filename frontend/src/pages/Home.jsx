@@ -27,7 +27,9 @@ export default function Home() {
           '#ff9800',
           '#f44336',
           '#9c27b0',
-          '#00bcd4'
+          '#00bcd4',
+          '#ffc107',
+          '#8bc34a',
         ],
         borderWidth: 1,
         hoverOffset: 50
@@ -37,6 +39,15 @@ export default function Home() {
 
   const options = {
     plugins: {
+      legend: {
+        display: true,
+        position: 'left',
+        align: 'center',
+        labels: {
+          boxWidth: 20,
+          padding: 10
+        }
+      },
       tooltip: {
         callbacks: {
           label: function (context) {
@@ -75,7 +86,9 @@ export default function Home() {
       <section className="chart-section">
         <h2>Sources d'écoanxiété (%)</h2>
         {ecoData.length > 0 ? (
-          <Pie data={chartData} options={options}/>
+          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+            <Pie data={chartData} options={options} />
+          </div>
         ) : (
           <p>Chargement des données...</p>
         )}
