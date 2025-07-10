@@ -8,6 +8,7 @@ function Navbar() {
       <Link to="/" className="nav-link">Accueil</Link>
       <Link to="/protection-oceans" className="nav-link">Protection des océans</Link>
       <Link to="/changement-climatique" className="nav-link">Changement climatique</Link>
+      <Link to="/especes-menacees" className="nav-link">Espèces menacées</Link>
     </nav>
   );
 }
