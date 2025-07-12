@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ProtectionOceans from './pages/ProtectionOceans';
 import ChangementClimatique from './pages/ChangementClimatique';
 import EspecesMenacees from './pages/EspecesMenacees';
+import Test from './pages/Test';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/protection-oceans" element={<ProtectionOceans />} />
         <Route path="/changement-climatique" element={<ChangementClimatique />} />
         <Route path="/especes-menacees" element={<EspecesMenacees />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
   );

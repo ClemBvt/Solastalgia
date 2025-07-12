@@ -1,3 +1,7 @@
+ul {
+  margin: 0 20%;
+}
+
 .home-container {
   font-family: sans-serif;
 }
@@ -17,12 +21,11 @@
 ;
 }
 
-.intro-section {
-  padding: 4rem 2rem;
-  height: 100vh;
-  max-width: 800px;
+.text-section {
+  padding: 2rem;
+  height: 80vh;
   margin: 0 auto;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   color: #184725;
   text-align: center;
@@ -36,5 +39,22 @@
 .chart-section h2 {
   margin-bottom: 2rem;
   color: #184725;
+}
 
+.container {
+  width: 90vw;
+  margin: 50vh auto;
+}
+
+.split {
+  opacity: 0;
+  text-align: center;
+  color: rgb(14, 16, 15);
+  font-size: 2rem;
+  will-change: transform;
+  color: #0e100f;
+}
+
+.split * {
+  will-change: transform;
 }
