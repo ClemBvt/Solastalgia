@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Home.css';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { animate } from 'animejs';
 import { Pie } from 'react-chartjs-2';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
+import '../styles/Home.css';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
 
 Chart.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -65,6 +67,23 @@ export default function Home() {
       }
     }
   };
+
+  animate('.title', {
+    // Property keyframes
+    y: [
+      { to: '-2.75rem', ease: 'outExpo', duration: 600 },
+      { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
+    ],
+    // Property specific parameters
+    rotate: {
+      from: '-1turn',
+      delay: 0
+    },
+    delay: (_, i) => i * 50, // Function based value
+    ease: 'inOutCirc',
+    loopDelay: 1000,
+    loop: true
+  });
 
   return (
     <div className="home-container">
