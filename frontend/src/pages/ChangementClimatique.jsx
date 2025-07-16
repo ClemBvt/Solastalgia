@@ -152,7 +152,7 @@ export default function ChangementClimatique() {
     </section>
     <div className="intro"> 
       <p className="text-intro">
-        Le changement climatique représente l’un des plus grands défis du XXIe siècle. L’augmentation des gaz à effet de serre, principalement émis par les activités humaines, entraîne un réchauffement global aux conséquences multiples : phénomènes météorologiques extrêmes, élévation du niveau des océans, fonte des glaces, et pertes de biodiversité. Comprendre les sources d’émissions (CO₂, CH₄, N₂O...) et leurs impacts permet d’agir plus efficacement. Cette section met en lumière les principales sources d’émissions et les effets déjà visibles sur notre planète.otection des océans est donc une priorité majeure pour assurer la stabilité climatique et préserver la vie marine.
+        Le changement climatique représente l’un des plus grands défis du XXIe siècle. L’augmentation des gaz à effet de serre, principalement émis par les activités humaines, entraîne un réchauffement global aux conséquences multiples : phénomènes météorologiques extrêmes, élévation du niveau des océans, fonte des glaces, et pertes de biodiversité. Comprendre les sources d’émissions (CO₂, CH₄, N₂O...) et leurs impacts permet d’agir plus efficacement. Cette section met en lumière les principales sources d’émissions et les effets déjà visibles sur notre planète.
       </p>
     </div>
     <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem' }}>
