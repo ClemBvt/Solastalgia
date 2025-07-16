@@ -6,44 +6,10 @@ ul {
   font-family: sans-serif;
 }
 
-.hero-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-size: 4rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #184725;
-;
-}
-
-.text-section {
-  padding: 2rem;
-  height: 80vh;
-  margin: 0 auto;
-  font-size: 1.4rem;
-  line-height: 1.8;
-  color: #184725;
-  text-align: center;
-}
-
-.chart-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.chart-section h2 {
-  margin-bottom: 2rem;
-  color: #184725;
-}
-
 .container {
   width: 90vw;
   margin: 50vh auto;
+  padding-top: 200px;
 }
 
 .split {

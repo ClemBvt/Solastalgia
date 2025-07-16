@@ -73,64 +73,49 @@ export default function Home() {
   };
 
   animate('.title', {
-    // Property keyframes
     y: [
       { to: '-2.75rem', ease: 'outExpo', duration: 600 },
       { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
     ],
-    // // Property specific parameters
-    // rotate: {
-    //   from: '-1turn',
-    //   delay: 1000,
-    // },
-    delay: (_, i) => i * 50, // Function based value
+    delay: (_, i) => i * 50,
     ease: 'inOutCirc',
     loopDelay: 1000,
     loop: true
   });
 
+  gsap.set(".split", { opacity: 1 });
 
-  gsap.registerPlugin(SplitText, ScrollTrigger);
+  document.fonts.ready.then(() => {
+    let containers = gsap.utils.toArray(".container");
 
-console.clear();
+    containers.forEach((container) => {
+      let text = container.querySelector(".split");
 
-gsap.set(".split", { opacity: 1 });
-
-document.fonts.ready.then(() => {
-  let containers = gsap.utils.toArray(".container");
-
-  containers.forEach((container) => {
-    let text = container.querySelector(".split");
-    let animation;
-
-    SplitText.create(text, {
-      type: "words,lines",
-      mask: "lines",
-      linesClass: "line",
-      autoSplit: true,
-      onSplit: (instance) => {
-        console.log("split")
-        return gsap.from(instance.lines, {
-          yPercent: 80,
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: container,
-            //markers: true,
-            scrub: true,
-            start: "clamp(top center)",
-            end: "clamp(bottom center)"
-          }
-        });
-      }
+      SplitText.create(text, {
+        type: "words,lines",
+        mask: "lines",
+        linesClass: "line",
+        autoSplit: true,
+        onSplit: (instance) => {
+          console.log("split")
+          return gsap.from(instance.lines, {
+            yPercent: 80,
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              start: "clamp(top center)",
+              end: "clamp(bottom center)"
+            }
+          });
+        }
+      });
     });
   });
-});
-
-
 
   return (
     <div className="home-container">
-      <section className="hero-section">
+      <section className="animation-section">
         <h1 className="title">S</h1>
         <h1 className="title">O</h1>
         <h1 className="title">L</h1>
@@ -144,16 +129,17 @@ document.fonts.ready.then(() => {
         <h1 className="title">A</h1>
       </section>
 
-      <div class="container">
-        <h2 class="split">Solastalgia est une plateforme web interactive qui vise à rendre les enjeux environnementaux accessibles et compréhensibles pour tous.
-        <br/>
-        <br/>
-        Grâce à des données visuelles, des indicateurs clés et des graphiques explicites, nous permettons au plus grand public de comprendre ses préoccupations environnementales.
+      <div className="container">
+        <h2 className="split">
+          Solastalgia est une plateforme web interactive qui vise à rendre les enjeux environnementaux accessibles et compréhensibles pour tous.
+          <br/>
+          <br/>
+          Grâce à des données visuelles et des graphiques explicites, nous permettons au plus grand public de comprendre ses préoccupations environnementales. En effet, nous avons pour but d'expliquer au plus grand public ce qui se passe réellement en se basant sur les principales sources d'écoanxiété en France.
         </h2>
       </div>
 
-      <section className="chart-section">
-        <h2>Principales sources d'écoanxiété en France</h2>
+      <section className="graph-section">
+        <h3>Principales sources d'écoanxiété en France</h3>
         {ecoData.length > 0 ? (
           <div style={{ maxWidth: '700px', margin: '0 auto'}}>
             <Pie data={chartData} options={options}/>
@@ -161,20 +147,6 @@ document.fonts.ready.then(() => {
         ) : (
           <p>Chargement des données...</p>
         )}
-      </section>
-
-      <section className="text-section">
-        <p>
-          Pour rappel, l'accord de Paris signé par 195 pays en 2015 vise à attenuer et s'adapter aux effets du changement climatique. 
-          <br/>
-          Les objectifs fixés sont :
-        </p>
-        <br/>
-        <ul>
-          <li>Limiter le réchauffement climatique à 1,5 °C par rapport aux niveaux préindustriels</li>
-          <li>Renforcer la résilience et réduire la vulnérabilité aux changements climatiques</li>
-          <li>Mobiliser des financements pour diminuer les emissions de gaz à effet de serre</li>
-        </ul>
       </section>
     </div>
   );

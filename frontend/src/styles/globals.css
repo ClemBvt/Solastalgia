@@ -27,7 +27,53 @@ section {
   padding: 2rem;
 }
 
-.container {
-  max-width: 1200px;
+.intro {
+  width: 90vw;
+  margin: 20vh auto;
+}
+
+.text-intro {
+  opacity: 0;
+  text-align:center;
+  color: rgb(14, 16, 15);
+  font-size: 25px; /*clamp(2rem, 5rem, 3vw);*/
+  letter-spacing: 0.05rem;
+  will-change: transform;
+  color: #0e100f;
+}
+
+.text-intro * {
+  will-change: transform;
+}
+
+.animation-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subpage {
+  margin-top: 30vh;
+  height: 10vh;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #184725;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  letter-spacing: 2px;
+  color: #184725;
+}
+
+.graph-section {
+  height: 90vh;
   margin: 0 auto;
+  max-width: 900px;
 }
